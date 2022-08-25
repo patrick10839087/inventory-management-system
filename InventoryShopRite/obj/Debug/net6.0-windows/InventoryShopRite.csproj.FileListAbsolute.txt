@@ -4,7 +4,6 @@ C:\Users\quame\Documents\GitHub\inventory-management-system\InventoryShopRite\bi
 C:\Users\quame\Documents\GitHub\inventory-management-system\InventoryShopRite\bin\Debug\net6.0-windows\InventoryShopRite.dll
 C:\Users\quame\Documents\GitHub\inventory-management-system\InventoryShopRite\bin\Debug\net6.0-windows\InventoryShopRite.pdb
 C:\Users\quame\Documents\GitHub\inventory-management-system\InventoryShopRite\obj\Debug\net6.0-windows\InventoryShopRite.csproj.AssemblyReference.cache
-C:\Users\quame\Documents\GitHub\inventory-management-system\InventoryShopRite\obj\Debug\net6.0-windows\InventoryShopRite.Form1.resources
 C:\Users\quame\Documents\GitHub\inventory-management-system\InventoryShopRite\obj\Debug\net6.0-windows\InventoryShopRite.Properties.Resources.resources
 C:\Users\quame\Documents\GitHub\inventory-management-system\InventoryShopRite\obj\Debug\net6.0-windows\InventoryShopRite.csproj.GenerateResource.cache
 C:\Users\quame\Documents\GitHub\inventory-management-system\InventoryShopRite\obj\Debug\net6.0-windows\InventoryShopRite.GeneratedMSBuildEditorConfig.editorconfig
@@ -16,3 +15,4 @@ C:\Users\quame\Documents\GitHub\inventory-management-system\InventoryShopRite\ob
 C:\Users\quame\Documents\GitHub\inventory-management-system\InventoryShopRite\obj\Debug\net6.0-windows\InventoryShopRite.pdb
 C:\Users\quame\Documents\GitHub\inventory-management-system\InventoryShopRite\obj\Debug\net6.0-windows\InventoryShopRite.genruntimeconfig.cache
 C:\Users\quame\Documents\GitHub\inventory-management-system\InventoryShopRite\obj\Debug\net6.0-windows\ref\InventoryShopRite.dll
+C:\Users\quame\Documents\GitHub\inventory-management-system\InventoryShopRite\obj\Debug\net6.0-windows\InventoryShopRite.Login.resources
