@@ -40,6 +40,8 @@
             this.userIDTab = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.splitter2 = new System.Windows.Forms.Splitter();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -47,15 +49,16 @@
             // splitter1
             // 
             this.splitter1.BackColor = System.Drawing.Color.Orange;
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Location = new System.Drawing.Point(0, 71);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(426, 821);
+            this.splitter1.Size = new System.Drawing.Size(417, 750);
             this.splitter1.TabIndex = 0;
             this.splitter1.TabStop = false;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Info;
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.button1);
@@ -64,7 +67,7 @@
             this.panel1.Controls.Add(this.passwordTab);
             this.panel1.Controls.Add(this.userIDTab);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(624, 188);
+            this.panel1.Location = new System.Drawing.Point(597, 196);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(524, 444);
             this.panel1.TabIndex = 1;
@@ -78,6 +81,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // checkBox1
             // 
@@ -158,14 +162,37 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Orange;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(719, 82);
+            this.label2.Location = new System.Drawing.Point(691, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(338, 31);
             this.label2.TabIndex = 1;
             this.label2.Text = "Inventory Management System";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // Form1
+            // splitter2
+            // 
+            this.splitter2.BackColor = System.Drawing.Color.Orange;
+            this.splitter2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitter2.Location = new System.Drawing.Point(0, 0);
+            this.splitter2.Name = "splitter2";
+            this.splitter2.Size = new System.Drawing.Size(1337, 71);
+            this.splitter2.TabIndex = 2;
+            this.splitter2.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(215, 366);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 20);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "CLEAR";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -175,8 +202,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.splitter1);
+            this.Controls.Add(this.splitter2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
@@ -200,5 +228,7 @@
         private Label label2;
         private PictureBox pictureBox1;
         private CheckBox checkBox1;
+        private Splitter splitter2;
+        private Label label3;
     }
 }
