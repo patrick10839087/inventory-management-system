@@ -80,5 +80,24 @@ namespace InventoryShopRite
                 userShow.DataSource = dTable;
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Products user1 = new Products();
+            user1.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Users user1 = new Users();
+            user1.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

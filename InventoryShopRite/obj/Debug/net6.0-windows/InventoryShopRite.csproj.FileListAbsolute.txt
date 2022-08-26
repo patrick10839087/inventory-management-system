@@ -35,3 +35,4 @@ C:\Users\quame\Documents\GitHub\inventory-management-system\InventoryShopRite\bi
 C:\Users\quame\Documents\GitHub\inventory-management-system\InventoryShopRite\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\quame\Documents\GitHub\inventory-management-system\InventoryShopRite\obj\Debug\net6.0-windows\InventoryShopRite.Users.resources
 C:\Users\quame\Documents\GitHub\inventory-management-system\InventoryShopRite\obj\Debug\net6.0-windows\InventoryShopRite.csproj.CopyComplete
+C:\Users\quame\Documents\GitHub\inventory-management-system\InventoryShopRite\obj\Debug\net6.0-windows\InventoryShopRite.Products.resources

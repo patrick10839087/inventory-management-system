@@ -55,7 +55,7 @@ namespace InventoryShopRite
                 }
                 else
                 {
-                    MessageBox.Show("Please enter a valid username or password");
+                    MessageBox.Show("Enter a valid ID or password");
                     userIDTab.Clear();
                     passwordTab.Clear();
 
@@ -93,6 +93,11 @@ namespace InventoryShopRite
         {
             userIDTab.Text = "";
             passwordTab.Text = "";
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
