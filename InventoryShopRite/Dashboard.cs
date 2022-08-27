@@ -10,28 +10,11 @@ using System.Windows.Forms;
 
 namespace InventoryShopRite
 {
-    public partial class Products : Form
+    public partial class Dashboard : Form
     {
-        public Products()
+        public Dashboard()
         {
             InitializeComponent();
-        }
-
-        private void Products_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Users user1 = new Users();
-            user1.Show();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -39,11 +22,11 @@ namespace InventoryShopRite
             Application.Exit();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Dashboard dash = new Dashboard();
-            dash.Show();
+            Users user1 = new Users();
+            user1.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)

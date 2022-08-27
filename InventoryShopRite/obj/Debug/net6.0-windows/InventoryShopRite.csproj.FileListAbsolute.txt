@@ -36,3 +36,4 @@ C:\Users\quame\Documents\GitHub\inventory-management-system\InventoryShopRite\bi
 C:\Users\quame\Documents\GitHub\inventory-management-system\InventoryShopRite\obj\Debug\net6.0-windows\InventoryShopRite.Users.resources
 C:\Users\quame\Documents\GitHub\inventory-management-system\InventoryShopRite\obj\Debug\net6.0-windows\InventoryShopRite.csproj.CopyComplete
 C:\Users\quame\Documents\GitHub\inventory-management-system\InventoryShopRite\obj\Debug\net6.0-windows\InventoryShopRite.Products.resources
+C:\Users\quame\Documents\GitHub\inventory-management-system\InventoryShopRite\obj\Debug\net6.0-windows\InventoryShopRite.Dashboard.resources

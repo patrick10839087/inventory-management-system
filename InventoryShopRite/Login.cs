@@ -50,8 +50,8 @@ namespace InventoryShopRite
 
                     // moving to next screen
                     this.Hide();
-                    Users user1 = new Users();
-                    user1.Show();
+                    Dashboard dash = new Dashboard();
+                    dash.Show();
                 }
                 else
                 {
