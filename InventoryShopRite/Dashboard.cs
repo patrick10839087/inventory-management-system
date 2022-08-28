@@ -35,5 +35,19 @@ namespace InventoryShopRite
             Products product = new Products();
             product.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Categories cat = new Categories();
+            cat.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Dashboard dash = new Dashboard();
+            dash.Show();
+        }
     }
 }

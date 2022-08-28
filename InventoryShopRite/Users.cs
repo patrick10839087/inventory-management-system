@@ -169,5 +169,17 @@ namespace InventoryShopRite
                 curData();
             }
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Categories cat = new Categories();
+            cat.Show();
+        }
     }
 }
