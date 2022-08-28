@@ -7,7 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic.ApplicationServices;
 using MySql.Data.MySqlClient;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
 namespace InventoryShopRite
 {
     public partial class Users : Form
@@ -18,8 +22,9 @@ namespace InventoryShopRite
         public Users()
         {
             InitializeComponent();
-            //SQL table selection
-            MySqlDataAdapter adapterInstance = new MySqlDataAdapter("SELECT * FROM users WHERE 1", connection);
+            // filling dataGrid
+
+            MySqlDataAdapter adapterInstance = new MySqlDataAdapter("SELECT * FROM users1 WHERE 1", connection);
             DataTable dTable = new DataTable();
             adapterInstance.Fill(dTable);
 
@@ -45,7 +50,15 @@ namespace InventoryShopRite
         {
 
         }
+        // filling dataFrame
+        void curData()
+        {
+            MySqlDataAdapter adapterInstance = new MySqlDataAdapter("SELECT * FROM users1 WHERE 1", connection);
+            DataTable dTable = new DataTable();
+            adapterInstance.Fill(dTable);
 
+            userShow.DataSource = dTable;
+        }
         private void button1_Click_1(object sender, EventArgs e)
         {
             using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -58,7 +71,7 @@ namespace InventoryShopRite
                 }
                 else
                 {
-                    string query = "INSERT INTO users(id, firstname, surname, password) VALUES ('" + id.Text + "','" + firstName.Text + "','" + surname.Text + "', '" + password.Text + "')";
+                    string query = "INSERT INTO users1(id, firstname, surname, password) VALUES ('" + id.Text + "','" + firstName.Text + "','" + surname.Text + "', '" + password.Text + "')";
                     command = new MySqlCommand(query, connection);
                     command.ExecuteNonQuery();
 
@@ -73,11 +86,7 @@ namespace InventoryShopRite
                 }
 
 
-                MySqlDataAdapter adapterInstance = new MySqlDataAdapter("SELECT * FROM users WHERE 1", connection);
-                DataTable dTable = new DataTable();
-                adapterInstance.Fill(dTable);
-
-                userShow.DataSource = dTable;
+                curData();
             }
         }
 
@@ -105,6 +114,60 @@ namespace InventoryShopRite
             this.Hide();
             Dashboard dash = new Dashboard();
             dash.Show();
+        }
+
+        private void userShow_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            /**firstName.Text = userShow.SelectedRows[0].Cells[0].Value.ToString();
+            surname.Text = userShow.SelectedRows[0].Cells[1].Value.ToString();
+            id.Text = userShow.SelectedRows[0].Cells[2].Value.ToString();
+            password.Text = userShow.SelectedRows[0].Cells[3].Value.ToString();*/
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.userShow.Rows[e.RowIndex];
+                id.Text = row.Cells[0].Value.ToString();
+                firstName.Text = row.Cells[1].Value.ToString();
+                surname.Text = row.Cells[2].Value.ToString();
+                password.Text = row.Cells[3].Value.ToString();
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (id.Text == "")
+            {
+                MessageBox.Show("ENTER USER ID");
+            }
+            else
+            {
+                connection.Open();
+                MySqlCommand command = new MySqlCommand();
+                string query = "DELETE FROM users1 WHERE id = '" + id.Text + "';";
+                command = new MySqlCommand(query, connection);
+                command.ExecuteNonQuery();
+                MessageBox.Show("USER DELETED");
+                connection.Close();
+                curData();
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (id.Text == "")
+            {
+                MessageBox.Show("ENTER USER ID");
+            }
+            else
+            {
+                connection.Open();
+                MySqlCommand command = new MySqlCommand();
+                string query = "UPDATE users1 SET id = '" + this.id.Text + "', firstName= '" + this.firstName.Text + "', surname = '"+ this.surname.Text+"', password='"+this.password.Text+"' where id='" + this.id.Text + "';";
+                command = new MySqlCommand(query, connection);
+                command.ExecuteNonQuery();
+                MessageBox.Show("USER UPDATED");
+                connection.Close();
+                curData();
+            }
         }
     }
 }

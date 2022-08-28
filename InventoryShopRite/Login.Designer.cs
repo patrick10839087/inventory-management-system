@@ -161,7 +161,7 @@
             this.userIDTab.Name = "userIDTab";
             this.userIDTab.Size = new System.Drawing.Size(209, 27);
             this.userIDTab.TabIndex = 2;
-            this.userIDTab.Text = "User ID";
+            this.userIDTab.Text = "UserID";
             // 
             // label1
             // 

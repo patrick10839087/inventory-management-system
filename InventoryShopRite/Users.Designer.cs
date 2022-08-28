@@ -36,6 +36,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.userShow = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.password = new System.Windows.Forms.TextBox();
@@ -49,6 +50,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userShow)).BeginInit();
@@ -113,17 +116,20 @@
             // userShow
             // 
             this.userShow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.userShow.Location = new System.Drawing.Point(666, 72);
+            this.userShow.Location = new System.Drawing.Point(669, 123);
             this.userShow.Name = "userShow";
             this.userShow.ReadOnly = true;
             this.userShow.RowHeadersWidth = 51;
             this.userShow.RowTemplate.Height = 29;
             this.userShow.Size = new System.Drawing.Size(634, 673);
             this.userShow.TabIndex = 0;
+            this.userShow.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.userShow_CellContentClick);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Info;
+            this.panel2.Controls.Add(this.button6);
+            this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.password);
@@ -133,10 +139,20 @@
             this.panel2.Controls.Add(this.surname);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.firstName);
-            this.panel2.Location = new System.Drawing.Point(212, 72);
+            this.panel2.Location = new System.Drawing.Point(213, 123);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(424, 673);
             this.panel2.TabIndex = 1;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(142, 275);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(94, 29);
+            this.button5.TabIndex = 9;
+            this.button5.Text = "Delete User";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button1
             // 
@@ -264,12 +280,35 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "ShopRite Inventory";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.SeaShell;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.label7.Location = new System.Drawing.Point(866, 71);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(208, 37);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "List Of All Users";
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(255, 275);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(94, 29);
+            this.button6.TabIndex = 10;
+            this.button6.Text = "Edit User";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // Users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(1337, 821);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.userShow);
@@ -287,6 +326,7 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -312,5 +352,8 @@
         private Label label6;
         private PictureBox pictureBox2;
         private Button button4;
+        private Button button5;
+        private Label label7;
+        private Button button6;
     }
 }

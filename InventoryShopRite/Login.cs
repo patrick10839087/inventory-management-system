@@ -12,7 +12,7 @@ namespace InventoryShopRite
         {
             InitializeComponent();
             //SQL table selection
-            MySqlDataAdapter adapterInstance = new MySqlDataAdapter("SELECT * FROM users WHERE 1", connection);
+            MySqlDataAdapter adapterInstance = new MySqlDataAdapter("SELECT * FROM users1 WHERE 1", connection);
             DataTable dTable = new DataTable();
             adapterInstance.Fill(dTable);
         }
@@ -35,7 +35,7 @@ namespace InventoryShopRite
 
             try
             {
-                string query = "SELECT id, password FROM users WHERE id='" + userIDTab.Text + "' AND password='" + passwordTab.Text + "'";
+                string query = "SELECT id, password FROM users1 WHERE id='" + userIDTab.Text + "' AND password='" + passwordTab.Text + "'";
 
                 MySqlDataAdapter adapterInstance = new MySqlDataAdapter(query, connection);
                 DataTable dTable = new DataTable();
