@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Products));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -38,11 +39,26 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.proName = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.proID = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.proPrice = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.proQuantity = new System.Windows.Forms.TextBox();
+            this.comboCat = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.userShow = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userShow)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -58,6 +74,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(125, 821);
             this.panel1.TabIndex = 0;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(12, 382);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(94, 29);
+            this.button7.TabIndex = 8;
+            this.button7.Text = "Categories";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button2
             // 
@@ -144,21 +170,168 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "ShopRite Inventory";
             // 
-            // button7
+            // button6
             // 
-            this.button7.Location = new System.Drawing.Point(12, 382);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(94, 29);
-            this.button7.TabIndex = 8;
-            this.button7.Text = "Categories";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button6.Location = new System.Drawing.Point(330, 382);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(136, 29);
+            this.button6.TabIndex = 24;
+            this.button6.Text = "Delete Product";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(485, 382);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(136, 29);
+            this.button5.TabIndex = 23;
+            this.button5.Text = "Edit Product";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(175, 382);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(136, 29);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Add Product";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(175, 143);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(138, 28);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Product Name";
+            // 
+            // proName
+            // 
+            this.proName.Location = new System.Drawing.Point(356, 147);
+            this.proName.Name = "proName";
+            this.proName.Size = new System.Drawing.Size(185, 27);
+            this.proName.TabIndex = 27;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(175, 99);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(105, 28);
+            this.label4.TabIndex = 26;
+            this.label4.Text = "Product ID";
+            // 
+            // proID
+            // 
+            this.proID.Location = new System.Drawing.Point(356, 103);
+            this.proID.Name = "proID";
+            this.proID.Size = new System.Drawing.Size(185, 27);
+            this.proID.TabIndex = 25;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(175, 229);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(54, 28);
+            this.label5.TabIndex = 32;
+            this.label5.Text = "Price";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // proPrice
+            // 
+            this.proPrice.Location = new System.Drawing.Point(356, 233);
+            this.proPrice.Name = "proPrice";
+            this.proPrice.Size = new System.Drawing.Size(185, 27);
+            this.proPrice.TabIndex = 31;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(175, 185);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(173, 28);
+            this.label6.TabIndex = 30;
+            this.label6.Text = "Quantity Available";
+            // 
+            // proQuantity
+            // 
+            this.proQuantity.Location = new System.Drawing.Point(356, 189);
+            this.proQuantity.Name = "proQuantity";
+            this.proQuantity.Size = new System.Drawing.Size(185, 27);
+            this.proQuantity.TabIndex = 29;
+            // 
+            // comboCat
+            // 
+            this.comboCat.FormattingEnabled = true;
+            this.comboCat.Location = new System.Drawing.Point(356, 278);
+            this.comboCat.Name = "comboCat";
+            this.comboCat.Size = new System.Drawing.Size(185, 28);
+            this.comboCat.TabIndex = 33;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(175, 278);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(92, 28);
+            this.label7.TabIndex = 34;
+            this.label7.Text = "Category";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.SeaShell;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.label8.Location = new System.Drawing.Point(862, 73);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(211, 37);
+            this.label8.TabIndex = 36;
+            this.label8.Text = "List Of Products";
+            // 
+            // userShow
+            // 
+            this.userShow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.userShow.Location = new System.Drawing.Point(665, 125);
+            this.userShow.Name = "userShow";
+            this.userShow.ReadOnly = true;
+            this.userShow.RowHeadersWidth = 51;
+            this.userShow.RowTemplate.Height = 29;
+            this.userShow.Size = new System.Drawing.Size(634, 673);
+            this.userShow.TabIndex = 35;
+            this.userShow.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.userShow_CellContentClick);
             // 
             // Products
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(1337, 821);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.userShow);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.comboCat);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.proPrice);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.proQuantity);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.proName);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.proID);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -171,7 +344,9 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userShow)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -187,5 +362,20 @@
         private Button button4;
         private Button button2;
         private Button button7;
+        private Button button6;
+        private Button button5;
+        private Button button1;
+        private Label label3;
+        private TextBox proName;
+        private Label label4;
+        private TextBox proID;
+        private Label label5;
+        private TextBox proPrice;
+        private Label label6;
+        private TextBox proQuantity;
+        private ComboBox comboCat;
+        private Label label7;
+        private Label label8;
+        private DataGridView userShow;
     }
 }

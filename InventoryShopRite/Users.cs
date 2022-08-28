@@ -181,5 +181,10 @@ namespace InventoryShopRite
             Categories cat = new Categories();
             cat.Show();
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

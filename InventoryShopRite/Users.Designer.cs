@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Users));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -52,7 +53,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userShow)).BeginInit();
@@ -74,6 +74,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(125, 821);
             this.panel1.TabIndex = 0;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(12, 398);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(94, 29);
+            this.button7.TabIndex = 7;
+            this.button7.Text = "Categories";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button4
             // 
@@ -304,16 +314,7 @@
             this.label7.Size = new System.Drawing.Size(208, 37);
             this.label7.TabIndex = 3;
             this.label7.Text = "List Of All Users";
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(12, 398);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(94, 29);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "Categories";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // Users
             // 
