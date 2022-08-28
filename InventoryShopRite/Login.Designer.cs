@@ -128,9 +128,9 @@
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.Location = new System.Drawing.Point(94, 179);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(31, 28);
+            this.label5.Size = new System.Drawing.Size(108, 28);
             this.label5.TabIndex = 6;
-            this.label5.Text = "ID";
+            this.label5.Text = "User Name";
             // 
             // label4
             // 
@@ -161,7 +161,7 @@
             this.userIDTab.Name = "userIDTab";
             this.userIDTab.Size = new System.Drawing.Size(209, 27);
             this.userIDTab.TabIndex = 2;
-            this.userIDTab.Text = "UserID";
+            this.userIDTab.Text = "UserName";
             // 
             // label1
             // 

@@ -48,6 +48,7 @@
             this.catID = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -202,6 +203,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.Info;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(165, 178);
             this.label2.Name = "label2";
@@ -219,6 +221,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.Info;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(165, 134);
             this.label1.Name = "label1";
@@ -253,6 +256,14 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click_1);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.Info;
+            this.panel2.Location = new System.Drawing.Point(156, 116);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(468, 195);
+            this.panel2.TabIndex = 22;
+            // 
             // Categories
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -270,6 +281,7 @@
             this.Controls.Add(this.button7);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Categories";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -307,5 +319,6 @@
         private TextBox catID;
         private Button button5;
         private Button button6;
+        private Panel panel2;
     }
 }

@@ -29,13 +29,13 @@ namespace InventoryShopRite
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string userID, userPassword;
-            userID = userIDTab.Text;
+            string userName, userPassword;
+            userName = userIDTab.Text;
             userPassword = passwordTab.Text;
 
             try
             {
-                string query = "SELECT id, password FROM users1 WHERE id='" + userIDTab.Text + "' AND password='" + passwordTab.Text + "'";
+                string query = "SELECT firstName, password FROM users1 WHERE firstName='" + userIDTab.Text + "' AND password='" + passwordTab.Text + "'";
 
                 MySqlDataAdapter adapterInstance = new MySqlDataAdapter(query, connection);
                 DataTable dTable = new DataTable();
@@ -43,7 +43,7 @@ namespace InventoryShopRite
 
                 if (dTable.Rows.Count > 0)
                 {
-                    userID = userIDTab.Text;
+                    userName = userIDTab.Text;
                     userPassword = passwordTab.Text;
 
                     // MessageBox.Show("Login Successfull");
@@ -55,7 +55,7 @@ namespace InventoryShopRite
                 }
                 else
                 {
-                    MessageBox.Show("Enter a valid ID or password");
+                    MessageBox.Show("Enter a valid UserName or password");
                     userIDTab.Clear();
                     passwordTab.Clear();
 

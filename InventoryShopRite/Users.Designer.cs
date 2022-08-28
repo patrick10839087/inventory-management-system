@@ -322,8 +322,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(1337, 821);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.userShow);
             this.Controls.Add(this.panel1);

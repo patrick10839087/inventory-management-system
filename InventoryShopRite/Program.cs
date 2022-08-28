@@ -7,7 +7,7 @@ namespace InventoryShopRite
         {
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Products());
+            Application.Run(new Login());
         }
     }
 }

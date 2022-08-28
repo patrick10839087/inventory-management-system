@@ -54,6 +54,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.userShow = new System.Windows.Forms.DataGridView();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.comboSearch = new System.Windows.Forms.ComboBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -172,7 +177,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(330, 382);
+            this.button6.Location = new System.Drawing.Point(334, 520);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(136, 29);
             this.button6.TabIndex = 24;
@@ -182,7 +187,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(485, 382);
+            this.button5.Location = new System.Drawing.Point(489, 520);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(136, 29);
             this.button5.TabIndex = 23;
@@ -192,7 +197,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(175, 382);
+            this.button1.Location = new System.Drawing.Point(179, 520);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(136, 29);
             this.button1.TabIndex = 22;
@@ -203,8 +208,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.Info;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(175, 143);
+            this.label3.Location = new System.Drawing.Point(179, 281);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(138, 28);
             this.label3.TabIndex = 28;
@@ -212,7 +218,7 @@
             // 
             // proName
             // 
-            this.proName.Location = new System.Drawing.Point(356, 147);
+            this.proName.Location = new System.Drawing.Point(360, 285);
             this.proName.Name = "proName";
             this.proName.Size = new System.Drawing.Size(185, 27);
             this.proName.TabIndex = 27;
@@ -220,8 +226,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.Info;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(175, 99);
+            this.label4.Location = new System.Drawing.Point(179, 237);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(105, 28);
             this.label4.TabIndex = 26;
@@ -229,7 +236,7 @@
             // 
             // proID
             // 
-            this.proID.Location = new System.Drawing.Point(356, 103);
+            this.proID.Location = new System.Drawing.Point(360, 241);
             this.proID.Name = "proID";
             this.proID.Size = new System.Drawing.Size(185, 27);
             this.proID.TabIndex = 25;
@@ -237,8 +244,9 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.Info;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(175, 229);
+            this.label5.Location = new System.Drawing.Point(179, 367);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 28);
             this.label5.TabIndex = 32;
@@ -247,7 +255,7 @@
             // 
             // proPrice
             // 
-            this.proPrice.Location = new System.Drawing.Point(356, 233);
+            this.proPrice.Location = new System.Drawing.Point(360, 371);
             this.proPrice.Name = "proPrice";
             this.proPrice.Size = new System.Drawing.Size(185, 27);
             this.proPrice.TabIndex = 31;
@@ -255,8 +263,9 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.SystemColors.Info;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(175, 185);
+            this.label6.Location = new System.Drawing.Point(179, 323);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(173, 28);
             this.label6.TabIndex = 30;
@@ -264,7 +273,7 @@
             // 
             // proQuantity
             // 
-            this.proQuantity.Location = new System.Drawing.Point(356, 189);
+            this.proQuantity.Location = new System.Drawing.Point(360, 327);
             this.proQuantity.Name = "proQuantity";
             this.proQuantity.Size = new System.Drawing.Size(185, 27);
             this.proQuantity.TabIndex = 29;
@@ -272,16 +281,18 @@
             // comboCat
             // 
             this.comboCat.FormattingEnabled = true;
-            this.comboCat.Location = new System.Drawing.Point(356, 278);
+            this.comboCat.Location = new System.Drawing.Point(360, 416);
             this.comboCat.Name = "comboCat";
             this.comboCat.Size = new System.Drawing.Size(185, 28);
             this.comboCat.TabIndex = 33;
+            this.comboCat.Text = "Select Category";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.Info;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(175, 278);
+            this.label7.Location = new System.Drawing.Point(179, 416);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(92, 28);
             this.label7.TabIndex = 34;
@@ -291,25 +302,74 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.SeaShell;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label8.Location = new System.Drawing.Point(862, 73);
+            this.label8.Location = new System.Drawing.Point(865, 92);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(211, 37);
+            this.label8.Size = new System.Drawing.Size(281, 46);
             this.label8.TabIndex = 36;
-            this.label8.Text = "List Of Products";
+            this.label8.Text = "Stock Availability";
             // 
             // userShow
             // 
             this.userShow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.userShow.Location = new System.Drawing.Point(665, 125);
+            this.userShow.Location = new System.Drawing.Point(665, 226);
             this.userShow.Name = "userShow";
             this.userShow.ReadOnly = true;
             this.userShow.RowHeadersWidth = 51;
             this.userShow.RowTemplate.Height = 29;
-            this.userShow.Size = new System.Drawing.Size(634, 673);
+            this.userShow.Size = new System.Drawing.Size(634, 572);
             this.userShow.TabIndex = 35;
             this.userShow.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.userShow_CellContentClick);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.Info;
+            this.panel3.Location = new System.Drawing.Point(157, 226);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(479, 333);
+            this.panel3.TabIndex = 37;
+            // 
+            // comboSearch
+            // 
+            this.comboSearch.FormattingEnabled = true;
+            this.comboSearch.Location = new System.Drawing.Point(830, 170);
+            this.comboSearch.Name = "comboSearch";
+            this.comboSearch.Size = new System.Drawing.Size(174, 28);
+            this.comboSearch.TabIndex = 38;
+            this.comboSearch.Text = "Select Category";
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(1152, 169);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(136, 29);
+            this.button8.TabIndex = 39;
+            this.button8.Text = "Refresh";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(1010, 170);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(136, 29);
+            this.button9.TabIndex = 40;
+            this.button9.Text = "Search";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.SeaShell;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.label9.Location = new System.Drawing.Point(251, 92);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(310, 46);
+            this.label9.TabIndex = 41;
+            this.label9.Text = "Mangage Products";
             // 
             // Products
             // 
@@ -317,6 +377,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(1337, 821);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.comboSearch);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.userShow);
             this.Controls.Add(this.label7);
@@ -334,6 +398,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Products";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -377,5 +442,10 @@
         private Label label7;
         private Label label8;
         private DataGridView userShow;
+        private Panel panel3;
+        private ComboBox comboSearch;
+        private Button button8;
+        private Button button9;
+        private Label label9;
     }
 }

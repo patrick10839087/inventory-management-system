@@ -39,13 +39,17 @@ namespace InventoryShopRite
                 dTable.Load(reader);
                 comboCat.ValueMember = "catName";
                 comboCat.DataSource = dTable;
+                comboSearch.ValueMember = "catName";
+                comboSearch.DataSource = dTable;
                 connection.Close();
+
             }
             catch
             {
 
             }
         }
+       
         private void Products_Load(object sender, EventArgs e)
         {
 
@@ -96,6 +100,14 @@ namespace InventoryShopRite
         void curData()
         {
             MySqlDataAdapter adapterInstance = new MySqlDataAdapter("SELECT * FROM products WHERE 1", connection);
+            DataTable dTable = new DataTable();
+            adapterInstance.Fill(dTable);
+
+            userShow.DataSource = dTable;
+        }
+        void filterByCategory()
+        {
+            MySqlDataAdapter adapterInstance = new MySqlDataAdapter("SELECT * FROM products WHERE proCategory = '"+comboSearch.SelectedValue.ToString()+"'", connection);
             DataTable dTable = new DataTable();
             adapterInstance.Fill(dTable);
 
@@ -180,6 +192,16 @@ namespace InventoryShopRite
                 connection.Close();
                 curData();
             }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            filterByCategory();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            curData();
         }
     }
 }
