@@ -42,6 +42,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
+            this.comboSearch = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.userShow)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -52,12 +53,12 @@
             // userShow
             // 
             this.userShow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.userShow.Location = new System.Drawing.Point(805, 222);
+            this.userShow.Location = new System.Drawing.Point(142, 130);
             this.userShow.Name = "userShow";
             this.userShow.ReadOnly = true;
             this.userShow.RowHeadersWidth = 51;
             this.userShow.RowTemplate.Height = 29;
-            this.userShow.Size = new System.Drawing.Size(417, 321);
+            this.userShow.Size = new System.Drawing.Size(517, 321);
             this.userShow.TabIndex = 1;
             this.userShow.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.userShow_CellContentClick);
             // 
@@ -168,7 +169,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(805, 147);
+            this.dateTimePicker1.Location = new System.Drawing.Point(409, 97);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(250, 27);
             this.dateTimePicker1.TabIndex = 4;
@@ -178,17 +179,27 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(689, 143);
+            this.label1.Location = new System.Drawing.Point(409, 63);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 31);
             this.label1.TabIndex = 4;
             this.label1.Text = "Sale Date";
+            // 
+            // comboSearch
+            // 
+            this.comboSearch.FormattingEnabled = true;
+            this.comboSearch.Location = new System.Drawing.Point(142, 96);
+            this.comboSearch.Name = "comboSearch";
+            this.comboSearch.Size = new System.Drawing.Size(174, 28);
+            this.comboSearch.TabIndex = 39;
+            this.comboSearch.Text = "Select Category";
             // 
             // Sales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1337, 821);
+            this.Controls.Add(this.comboSearch);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.panel3);
@@ -197,6 +208,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Sales";
             this.Text = "Sales";
+            this.Load += new System.EventHandler(this.Sales_Load);
             ((System.ComponentModel.ISupportInitialize)(this.userShow)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -223,5 +235,6 @@
         private PictureBox pictureBox1;
         private DateTimePicker dateTimePicker1;
         private Label label1;
+        private ComboBox comboSearch;
     }
 }

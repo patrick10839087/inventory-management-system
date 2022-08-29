@@ -338,6 +338,7 @@
             this.comboSearch.Size = new System.Drawing.Size(174, 28);
             this.comboSearch.TabIndex = 38;
             this.comboSearch.Text = "Select Category";
+            this.comboSearch.SelectedIndexChanged += new System.EventHandler(this.comboSearch_SelectedIndexChanged);
             // 
             // button8
             // 

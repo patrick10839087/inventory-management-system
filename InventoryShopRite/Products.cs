@@ -203,5 +203,10 @@ namespace InventoryShopRite
         {
             curData();
         }
+
+        private void comboSearch_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
