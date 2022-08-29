@@ -101,48 +101,53 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(479, 322);
+            this.button3.BackColor = System.Drawing.Color.GreenYellow;
+            this.button3.Location = new System.Drawing.Point(240, 327);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 29);
+            this.button3.Size = new System.Drawing.Size(138, 87);
             this.button3.TabIndex = 4;
             this.button3.Text = "Users";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(621, 396);
+            this.button2.BackColor = System.Drawing.Color.GreenYellow;
+            this.button2.Location = new System.Drawing.Point(571, 586);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 29);
+            this.button2.Size = new System.Drawing.Size(138, 87);
             this.button2.TabIndex = 5;
             this.button2.Text = "Products";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(777, 278);
+            this.button1.BackColor = System.Drawing.Color.GreenYellow;
+            this.button1.Location = new System.Drawing.Point(937, 327);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
+            this.button1.Size = new System.Drawing.Size(138, 87);
             this.button1.TabIndex = 7;
             this.button1.Text = "Categories";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(555, 224);
+            this.button4.BackColor = System.Drawing.Color.GreenYellow;
+            this.button4.Location = new System.Drawing.Point(571, 144);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(94, 29);
+            this.button4.Size = new System.Drawing.Size(138, 87);
             this.button4.TabIndex = 8;
             this.button4.Text = "Dashboard";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1337, 821);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button1);
