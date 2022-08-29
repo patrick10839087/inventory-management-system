@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.comboAccess = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -62,6 +64,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Info;
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.comboAccess);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.checkBox1);
@@ -76,11 +80,32 @@
             this.panel1.Size = new System.Drawing.Size(524, 444);
             this.panel1.TabIndex = 1;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(94, 299);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(100, 28);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "User Level";
+            // 
+            // comboAccess
+            // 
+            this.comboAccess.FormattingEnabled = true;
+            this.comboAccess.Items.AddRange(new object[] {
+            "ADMIN",
+            "ATTENDANT"});
+            this.comboAccess.Location = new System.Drawing.Point(215, 299);
+            this.comboAccess.Name = "comboAccess";
+            this.comboAccess.Size = new System.Drawing.Size(209, 28);
+            this.comboAccess.TabIndex = 5;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(215, 366);
+            this.label3.Location = new System.Drawing.Point(176, 411);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 20);
             this.label3.TabIndex = 10;
@@ -101,7 +126,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(323, 366);
+            this.checkBox1.Location = new System.Drawing.Point(284, 411);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(132, 24);
             this.checkBox1.TabIndex = 8;
@@ -114,7 +139,7 @@
             this.button1.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.Info;
-            this.button1.Location = new System.Drawing.Point(254, 305);
+            this.button1.Location = new System.Drawing.Point(215, 350);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(117, 36);
             this.button1.TabIndex = 7;
@@ -264,5 +289,7 @@
         private Label label3;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
+        private Label label6;
+        private ComboBox comboAccess;
     }
 }

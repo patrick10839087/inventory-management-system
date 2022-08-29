@@ -208,5 +208,10 @@ namespace InventoryShopRite
         {
 
         }
+
+        private void comboCat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

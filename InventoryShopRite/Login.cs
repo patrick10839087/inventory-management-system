@@ -29,13 +29,14 @@ namespace InventoryShopRite
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string userName, userPassword;
+            string userName, userPassword, userLevel;
             userName = userIDTab.Text;
             userPassword = passwordTab.Text;
+            userLevel = comboAccess.SelectedItem.ToString();
 
             try
             {
-                string query = "SELECT firstName, password FROM users1 WHERE firstName='" + userIDTab.Text + "' AND password='" + passwordTab.Text + "'";
+                string query = "SELECT firstName, password, accessLevel FROM users1 WHERE firstName='" + userIDTab.Text + "' AND password='" + passwordTab.Text + "' AND accessLevel='" + comboAccess.SelectedItem.ToString() + "'";
 
                 MySqlDataAdapter adapterInstance = new MySqlDataAdapter(query, connection);
                 DataTable dTable = new DataTable();
@@ -45,20 +46,30 @@ namespace InventoryShopRite
                 {
                     userName = userIDTab.Text;
                     userPassword = passwordTab.Text;
+                    userLevel = comboAccess.SelectedItem.ToString();
 
-                    // MessageBox.Show("Login Successfull");
+                    if (userLevel == "ADMIN")
+                    {
+                        // moving to admin screen
+                        this.Hide();
+                        Dashboard dash = new Dashboard();
+                        dash.Show();
+                    }
 
-                    // moving to next screen
-                    this.Hide();
-                    Dashboard dash = new Dashboard();
-                    dash.Show();
+                    if (userLevel == "ATTENDANT")
+                    {
+                        // attendant screen
+                        this.Hide();
+                        Sales sales = new();
+                        sales.Show();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Enter a valid UserName or password");
+                    MessageBox.Show("ENTER VALID CREDENTIALS");
                     userIDTab.Clear();
                     passwordTab.Clear();
-
+                    //comboAccess.Items.Clear();
                     userIDTab.Focus();
                 }
 
@@ -67,6 +78,7 @@ namespace InventoryShopRite
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                //Console.WriteLine("errorrrr " + ex);
             }
             finally
             {

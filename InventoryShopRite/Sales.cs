@@ -56,8 +56,23 @@ namespace InventoryShopRite
             {
 
             }
+
         }
+
+        void curStock()
+        {
+            connection.Open();
+            int id = Convert.ToInt32( userShow.SelectedRows[0].Cells[0].Value.ToString());
+            int upStock = stock - Convert.ToInt32(quantityBox.Text);
+            string query = "UPDATE products SET proQuantity = '" + upStock + "' where proID='" + id + "';";
+            MySqlCommand command = new MySqlCommand(query, connection);
+            command.ExecuteNonQuery();
+            connection.Close();
+            curData();
+        }
+
         int flag = 0;
+        int stock;
         private void userShow_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -65,6 +80,7 @@ namespace InventoryShopRite
                 DataGridViewRow row = this.userShow.Rows[e.RowIndex];
                 //num = Convert.ToInt32(row.Cells[0].Value.ToString());
                 product = row.Cells[1].Value.ToString();
+                stock = Convert.ToInt32(row.Cells[2].Value.ToString());
                 //quantity = Convert.ToInt32(quantityBox.Text);
                 uPrice = Convert.ToInt32(row.Cells[3].Value.ToString());
                 //totPrice = quantity * uPrice;
@@ -85,6 +101,8 @@ namespace InventoryShopRite
                 MessageBox.Show("ENTER THE NUMBER OF PRODUCTS");
             else if (flag == 0)
                 MessageBox.Show("SELECT THE PRODUCT");
+            else if (Convert.ToInt32(quantityBox.Text) > stock)
+                MessageBox.Show("ORDER EXCEEDS AVAILABLE STOCK");
             else
             {
                 num += 1;
@@ -95,7 +113,8 @@ namespace InventoryShopRite
                 flag = 0;
             }
             sum = sum + totPrice;
-            TotAmount.Text = "GHS " + sum.ToString();
+            TotAmount.Text = "GHS" + sum.ToString();
+            //curStock();
         }
 
         private void comboSearch_SelectedIndexChanged(object sender, EventArgs e)

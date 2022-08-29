@@ -65,13 +65,13 @@ namespace InventoryShopRite
             {
                 connection.Open();
                 MySqlCommand command = new MySqlCommand();
-                if (firstName.Text == "" & surname.Text == "" & id.Text == "" & password.Text == "")
+                if (firstName.Text == "" & surname.Text == "" & id.Text == "" & password.Text == "" & accessLevel.Text == "")
                 {
                     MessageBox.Show("Please fill out fields");
                 }
                 else
                 {
-                    string query = "INSERT INTO users1(id, firstname, surname, password) VALUES ('" + id.Text + "','" + firstName.Text + "','" + surname.Text + "', '" + password.Text + "')";
+                    string query = "INSERT INTO `users1`(`id`, `firstName`, `surname`, `password`, `accessLevel`) VALUES ('" + id.Text + "','" + firstName.Text + "','" + surname.Text + "','" + password.Text + "', '"+accessLevel.Text+"')";
                     command = new MySqlCommand(query, connection);
                     command.ExecuteNonQuery();
 
@@ -81,6 +81,7 @@ namespace InventoryShopRite
                     surname.Text = String.Empty;
                     firstName.Text = String.Empty;
                     password.Text = String.Empty;
+                    accessLevel.Text = String.Empty;
 
                     id.Focus();
                 }
@@ -129,6 +130,7 @@ namespace InventoryShopRite
                 firstName.Text = row.Cells[1].Value.ToString();
                 surname.Text = row.Cells[2].Value.ToString();
                 password.Text = row.Cells[3].Value.ToString();
+                accessLevel.Text = row.Cells[4].Value.ToString();
             }
         }
 
@@ -161,7 +163,7 @@ namespace InventoryShopRite
             {
                 connection.Open();
                 MySqlCommand command = new MySqlCommand();
-                string query = "UPDATE users1 SET id = '" + this.id.Text + "', firstName= '" + this.firstName.Text + "', surname = '"+ this.surname.Text+"', password='"+this.password.Text+"' where id='" + this.id.Text + "';";
+                string query = "UPDATE users1 SET id = '" + this.id.Text + "', firstName= '" + this.firstName.Text + "', surname = '"+ this.surname.Text+"', password='"+this.password.Text+"', accessLevel='"+this.accessLevel.Text+"' where id='" + this.id.Text + "';";
                 command = new MySqlCommand(query, connection);
                 command.ExecuteNonQuery();
                 MessageBox.Show("USER UPDATED");
@@ -183,6 +185,11 @@ namespace InventoryShopRite
         }
 
         private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void password_TextChanged(object sender, EventArgs e)
         {
 
         }

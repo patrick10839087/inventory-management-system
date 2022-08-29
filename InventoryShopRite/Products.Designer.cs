@@ -286,6 +286,7 @@
             this.comboCat.Size = new System.Drawing.Size(185, 28);
             this.comboCat.TabIndex = 33;
             this.comboCat.Text = "Select Category";
+            this.comboCat.SelectedIndexChanged += new System.EventHandler(this.comboCat_SelectedIndexChanged);
             // 
             // label7
             // 

@@ -53,6 +53,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.accessLevel = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userShow)).BeginInit();
@@ -140,6 +142,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Info;
+            this.panel2.Controls.Add(this.accessLevel);
+            this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.button1);
@@ -204,6 +208,7 @@
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(185, 27);
             this.password.TabIndex = 6;
+            this.password.TextChanged += new System.EventHandler(this.password_TextChanged);
             // 
             // label3
             // 
@@ -316,6 +321,23 @@
             this.label7.Text = "List Of All Users";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(17, 210);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(69, 28);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Access";
+            // 
+            // accessLevel
+            // 
+            this.accessLevel.Location = new System.Drawing.Point(129, 214);
+            this.accessLevel.Name = "accessLevel";
+            this.accessLevel.Size = new System.Drawing.Size(185, 27);
+            this.accessLevel.TabIndex = 13;
+            // 
             // Users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -370,5 +392,7 @@
         private Label label7;
         private Button button6;
         private Button button7;
+        private TextBox accessLevel;
+        private Label label8;
     }
 }
